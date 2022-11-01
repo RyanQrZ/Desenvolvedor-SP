@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, num, n1=0, n2=1, sum,y=0;
+
+    scanf("%d", &num);
+
+    for(i=1; i<=num; i++){
+        sum = n1 + n2;
+        n1 = n2;
+        n2 = sum;
+
+        if( sum == num){
+            y++;
+        }
+    }
+
+    if(y>0){
+        printf("O NUMERO DIGITADO PERTENCE A SEQUENCIA\n");
+    }
+    else{
+        printf("O NUMERO DIGITADO NAO FAZ PARTE DA SEQUENCIA\n");
+    }
+
+    return 0;
+}
