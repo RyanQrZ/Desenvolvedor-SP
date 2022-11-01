@@ -1,0 +1,33 @@
+float value[31], higher=0, total=0, aux=0, valDays=0, days=0, med;
+    int i, j;
+
+    for(i=1; i<=30; i++){
+        scanf("%f", &value[i]);
+
+        if(value[i] != 0){
+            total = total + value[i];
+            valDays++;
+        }
+        else{}
+    }
+
+    med = (total/valDays);
+
+    for(j=1; j<=29; j++){
+        for(i=1; i<=29; i++){
+            if(value[i] > value[i+1]){
+                aux = value[i+1];
+                value[i+1] = value[i];
+                value[i] = aux;
+            }
+        }
+    }
+
+    for(i=1; i<=30; i++){
+        if(value[i] > med ){
+            days++;
+        }
+    }
+
+    printf("MENOR FATURAMENTO: %.4f\nMAIOR FATURAMENTO: %.4f\n", value[1], value[30]);
+    printf("DIAS COM FATURAMENTO MAIOR QUE A MEDIA: %.0f\n", days);
