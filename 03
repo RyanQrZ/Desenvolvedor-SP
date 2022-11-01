@@ -1,4 +1,9 @@
-float value[31], higher=0, total=0, aux=0, valDays=0, days=0, med;
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float value[31], higher=0, total=0, aux=0, valDays=0, days=0, med;
     int i, j;
 
     for(i=1; i<=30; i++){
@@ -31,3 +36,6 @@ float value[31], higher=0, total=0, aux=0, valDays=0, days=0, med;
 
     printf("MENOR FATURAMENTO: %.4f\nMAIOR FATURAMENTO: %.4f\n", value[1], value[30]);
     printf("DIAS COM FATURAMENTO MAIOR QUE A MEDIA: %.0f\n", days);
+
+    return 0;
+}
