@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+char text[50], textIn[50];
+int end=0, i, i2;
+
+void ord(){
+
+    while(text[end] !='\0'){
+        end++;
+    }
+
+
+    i2 = end -1;
+
+
+    for(i=0; i<end; i++){
+        textIn[i] = text[i2];
+        i2--;
+    }
+}
+
+int main()
+{
+    gets(text);
+    ord();
+    puts(textIn);
+
+    return 0;
+}
