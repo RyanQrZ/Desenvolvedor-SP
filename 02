@@ -17,7 +17,7 @@ int main()
         }
     }
 
-    if(y>0){
+    if(y>0 || num ==0){
         printf("O NUMERO DIGITADO PERTENCE A SEQUENCIA\n");
     }
     else{
